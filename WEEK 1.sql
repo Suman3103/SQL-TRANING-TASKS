@@ -80,7 +80,7 @@ WHERE NAME = 'SURESH RAO';
 UPDATE EMPLOYEE
 SET SALARY = 19755,
 	EMAIL =' POOJAMEHTa11@gmail.com'
-where name = 'pooja metha';
+where name = 'pooja mehta';
 
 update EMPLOYEE
 SET SALARY = SALARY*1.10
