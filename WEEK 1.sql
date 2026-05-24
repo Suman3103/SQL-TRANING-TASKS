@@ -1,0 +1,92 @@
+-- DDL COMANDS
+-- STEP 1 DELETING EMPLOYEE TABLE IN THE DATABASE IF EXISTS
+DROP TABLE IF EXISTS EMPLOYEE;
+
+-- STEP 2 CREATING TABLE NAMED EMPLOYEE
+CREATE TABLE EMPLOYEE( ID INT PRIMARY KEY AUTO_INCREMENT,
+						NAME VARCHAR(50) NOT NULL,
+                        DEPARTMENT VARCHAR(59),
+                        SALARY DECIMAL(20,5),
+                        HIREDATE DATE);
+                        
+-- STEP 3.1 ALTERING TABLE BY ADDING EMAIL
+ALTER TABLE EMPLOYEE
+ADD  EMAIL VARCHAR(60);
+ -- 3.2 ALTERING COLUMN 
+  ALTER TABLE EMPLOYEE
+  RENAME COLUMN EMAIL TO EMAILS;
+  
+  ALTER TABLE EMPLOYEE 
+  MODIFY COLUMN EMAILS VARCHAR(100);
+  
+  -- STEP 4 DROPING THE TABLE 
+  ALTER TABLE EMPLOYEE
+  DROP COLUMN EMAILS;
+  
+  -- STEP 5 TRUNCATING THE TABLE
+  TRUNCATE TABLE EMPLOYEE;
+  
+  -- STEP 6 DROPING TABLE 
+   DROP TABLE EMPLOYEE;
+
+
+
+
+CREATE TABLE IF NOT EXISTS EMPLOYEE(
+ID INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(50) NOT NULL,
+DEPARTMENT VARCHAR(50),
+SALARY DECIMAL(20.2),
+HIREDATE DATE);
+ ALTER TABLE EMPLOYEE
+ ADD COLUMN EMAIL varchar(100);
+-- DML 
+-- 1 INSERTING ONE value
+INSERT INTO EMPLOYEE(ID,NAME,DEPARTMENT,SALARY,HIREDATE)
+VALUES (1,'MAX ZAN', 'HR', 450000, '2023-03-01');
+
+UPDATE EMPLOYEE
+SET EMAIL = 'MAXZAN12@GAIML.COM'
+WHERE ID =1;
+-- 2 INSERTING MULTIPLE VALUES
+INSERT INTO EMPLOYEE(NAME,DEPARTMENT,SALARY,HIREDATE,EMAIL)
+VALUES ('VIJAY SHARMA', 'HR', 45000, '2023-03-01', 'VIJAYSHAR86757@GMAIL.COM'),
+('ADITI MOAL', 'FINANCE',50000,'2022-11-30', 'ADITIMOAL212@GAMIL.COM'),
+('ABBY AGARWAL', 'IT', 75000,'2018-12-09', 'ABBY2109@GMAIL.COM'),
+('SUMAN MARTY','IT',75300,'2025-02-24','SUMANJGE12@GAMI.COM'),
+('Rahul Sharma', 'IT', 65000, '2021-03-15', 'rahul.sharma@gmail.com'),
+('Priya Verma', 'HR', 52000, '2020-07-21', 'priya.verma@gmail.com'),
+('Amit Kumar', 'Finance', 72000, '2019-11-10', 'amit.kumar@gmail.com'),
+('Sneha Reddy', 'Marketing', 58000, '2022-01-05', 'sneha.reddy@gmail.com'),
+('Vikram Singh', 'IT', 80000, '2018-09-18', 'vikram.singh@gmail.com'),
+('Neha Joshi', 'Sales', 47000, '2023-02-14', 'neha.joshi@gmail.com'),
+('Arjun Patel', 'Operations', 69000, '2021-06-30', 'arjun.patel@gmail.com'),
+('Kavya Nair', 'HR', 54000, '2020-12-12', 'kavya.nair@gmail.com'),
+('Rohan Das', 'Finance', 75000, '2019-04-25', 'rohan.das@gmail.com'),
+('Meera Iyer', 'Marketing', 61000, '2022-08-09', 'meera.iyer@gmail.com'),
+('Suresh Rao', 'IT', 90000, '2017-05-16', 'suresh.rao@gmail.com'),
+('Anjali Gupta', 'Sales', 50000, '2021-10-01', 'anjali.gupta@gmail.com'),
+('Kiran Shetty', 'Operations', 67000, '2020-03-19', 'kiran.shetty@gmail.com'),
+('Pooja Mehta', 'Finance', 78000, '2018-07-27', 'pooja.mehta@gmail.com'),
+('Dev Malhotra', 'IT', 85000, '2023-01-11', 'dev.malhotra@gmail.com');
+
+
+-- UPDATING SALARY 
+SET SQL_SAFE_UPDATES =0;
+UPDATE EMPLOYEE
+SET SALARY = 95000
+WHERE NAME = 'SURESH RAO';
+
+UPDATE EMPLOYEE
+SET SALARY = 19755,
+	EMAIL =' POOJAMEHTa11@gmail.com'
+where name = 'pooja metha';
+
+update EMPLOYEE
+SET SALARY = SALARY*1.10
+WHERE DEPARTMENT = 'IT';
+
+DELETE FROM EMPLOYEE
+WHERE NAME = 'ROHAN DAS';
+
+
