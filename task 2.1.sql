@@ -33,7 +33,7 @@ values (10, 'hr', 'bangalore', 'vijay sharma', 5000000),
 	   (20,'finance', 'Bangalore', 'Rahul Sharma', 5000000.00),
 (30,'it', 'Mumbai', 'Priya Verma', 2000000.00),
 (40,'operations', 'Delhi', 'Amit Kumar', 3500000.00),
-(50,'sales','chennai','rohan das',4500000),
+(50,'sales','chennai','Anjali Gupta',4500000),
 (60,'marketing','delhi','Meera iyer',300000);
 -- adding foreign key in employee table
 alter table  employee
